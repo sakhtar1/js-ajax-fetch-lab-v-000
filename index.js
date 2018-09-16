@@ -6,8 +6,8 @@ function getToken() {
 }
 
 function forkRepo() {
-
   const giturl = 'https://api.github.com';
+  const user = '<YOUR_USERNAME>';
   const repo = 'learn-co-curriculum/js-ajax-fetch-lab';
   const url = `${giturl}/repos/${repo}/forks`;
 
@@ -31,8 +31,8 @@ function showResults(json) {
 }
 
 function createIssue() {
-  const user = 'USER'
   const giturl = 'https://api.github.com';
+  const user = '<YOUR_USERNAME>';
   const repo = `${user}/js-ajax-fetch-lab`;
   const url = `${giturl}/repos/${repo}/issues`;
 
