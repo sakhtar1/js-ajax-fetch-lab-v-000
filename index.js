@@ -2,14 +2,13 @@
 function getToken() {
   //change to your token to run in browser, but set
   //back to '' before committing so all tests pass
-
   return '';
 }
 
 function forkRepo() {
   const repo = 'learn-co-curriculum/js-ajax-fetch-lab';
 
-  fetch('https://github.com/repos/learn-co-curriculum/js-ajax-fetch-lab/forks',{
+  fetch('https://api.github.com/repos/learn-co-curriculum/js-ajax-fetch-lab/forks',{
     method: 'POST',
     headers: {
     Authorization: `token ${getToken()}`
@@ -29,8 +28,7 @@ function showResults(json) {
 
 function createIssue() {
 
-  const repo = 'learn-co-curriculum/js-ajax-fetch-lab';
-  const url = `'https://api.github.com/repos/${repo}/issues`;
+  const url = `'https://api.github.com/repos/'learn-co-curriculum/js-ajax-fetch-lab'/issues`;
 
   const postData = {
     title: document.getElementById('title').value,
