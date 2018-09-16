@@ -12,21 +12,22 @@ function forkRepo() {
   const url = `${giturl}/repos/${repo}/forks`;
 
 
+
   fetch(url, {
     method: 'POST',
     headers: {
-    Authorization: `token ${getToken()}`
+      Authorization: `token ${getToken()}`
     }
   })
-    .then(res => res.json());
+    .then(res => res.json())
     .then(json => showResults(json));
-      })
   //use fetch to fork it!
 }
 
 function showResults(json) {
   document.getElementById('results').innerHTML = `<a href=${json.html_url}>${
-    json.html_url}</a>`;
+     json.html_url
+   }</a>`;
   //use this function to display the results from forking via the API
 }
 
@@ -37,22 +38,21 @@ function createIssue() {
   const url = `${giturl}/repos/${repo}/issues`;
 
   const postData = {
-    title: document.getElementById('title').value,
-     body: document.getElementById('body').value
-   };
+  title: document.getElementById('title').value,
+  body: document.getElementById('body').value
+};
 
-   fetch(url, {
-    method: 'POST',
-    body: JSON.stringify(postData),
-    headers: {
-      Authorization: `token ${getToken()}`
-    }
-  })
-  .then(res => res.json());
-  .then(json => json.getIssues());
+fetch(url, {
+  method: 'POST',
+  body: JSON.stringify(postData),
+  headers: {
+    Authorization: `token ${getToken()}`
+  }
+})
+  .then(res => res.json())
+  .then(json => getIssues());
   //use this function to create an issue based on the values input in index.html
 }
-
 function getIssues() {
   const giturl = 'https://api.github.com';
   const user = '<YOUR_USERNAME>';
