@@ -59,12 +59,12 @@ function getIssues() {
   const repo = `${user}/js-ajax-fetch-lab`;
   const url = `${giturl}/repos/${repo}/issues`;
   fetch(url, {
-    headers: {
-      Authorization: `token ${getToken()}`
-    }
-  })
-    .then(res => res.json())
-    .then(json => console.log(json));
+  headers: {
+    Authorization: `token ${getToken()}`
+  }
+})
+  .then(res => res.json())
+  .then(json => console.log(json));
 
   //once an issue is submitted, fetch all open issues to see the issues you are creating
 }
