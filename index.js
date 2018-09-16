@@ -1,4 +1,4 @@
-const baseURL = 'https://api.github.com';
+
 function getToken() {
   //change to your token to run in browser, but set
   //back to '' before committing so all tests pass
@@ -28,8 +28,9 @@ function showResults(json) {
 }
 
 function createIssue() {
+  
   const repo = 'learn-co-curriculum/js-ajax-fetch-lab';
-  const url = `${baseURL}/repos/${repo}/issues`;
+  const url = `'https://api.github.com/repos/${repo}/issues`;
 
   const postData = {
     title: document.getElementById('title').value,
