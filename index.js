@@ -31,8 +31,10 @@ function showResults(json) {
 }
 
 function createIssue() {
-
-  const url = `https://api.github.com/learn-co-curriculum/js-ajax-fetch-lab/issues`;
+  const user = 'USER'
+  const giturl = 'https://api.github.com';
+  const repo = `${user}/js-ajax-fetch-lab`;
+  const url = `${giturl}/repos/${repo}/issues`;
 
   const postData = {
     title: document.getElementById('title').value,
