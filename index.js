@@ -28,15 +28,14 @@ function showResults(json) {
 
 function createIssue() {
 
-  const url = `'https://api.github.com/repos/'learn-co-curriculum/js-ajax-fetch-lab'/issues`;
+  const url = `https://api.github.com/repos/learn-co-curriculum/js-ajax-fetch-lab/issues`;
 
   const postData = {
     title: document.getElementById('title').value,
      body: document.getElementById('body').value
    };
 
-fetch('url',
-  {
+   fetch(url,{
     method: 'POST',
     body: JSON.stringify(postData),
     headers: {
@@ -49,8 +48,8 @@ fetch('url',
 }
 
 function getIssues() {
-  const repo = 'learn-co-curriculum/js-ajax-fetch-lab';
-  const url = `${baseURL}/repos/${repo}/issues`;
+  const repo = '';
+  const url = `https://api.github.com/repos/learn-co-curriculum/js-ajax-fetch-lab/issues`;
 
   fetch('url',
     {
