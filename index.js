@@ -10,7 +10,7 @@ function forkRepo() {
   const giturl = 'https://api.github.com';
   const repo = 'learn-co-curriculum/js-ajax-fetch-lab';
   const url = `${giturl}/repos/${repo}/forks`;
-  
+
 
   fetch(url,{
     method: 'POST',
