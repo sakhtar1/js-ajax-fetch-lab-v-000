@@ -1,11 +1,25 @@
-function getToken() {
+function getToken(token) {
   //change to your token to run in browser, but set
   //back to '' before committing so all tests pass
   return '';
 }
 
-function forkRepo() {
+function forkRepo(getToken) {
   const repo = 'learn-co-curriculum/js-ajax-fetch-lab';
+  const token = ''
+  const postData = {
+    title:''
+    body: ''
+  }
+  fetch('https://github.com/learn-co-curriculum/js-ajax-fetch-lab',{
+    method: 'POST',
+    body: JSON.stringify(postData),
+    headers: {
+    Authorization: `token ${token}`
+    }
+    }
+    ).then(res => console.log(res));
+      })
   //use fetch to fork it!
 }
 
