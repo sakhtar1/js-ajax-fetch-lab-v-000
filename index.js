@@ -12,7 +12,7 @@ function forkRepo() {
   const url = `${giturl}/repos/${repo}/forks`;
 
 
-  fetch(url,{
+  fetch(url, {
     method: 'POST',
     headers: {
     Authorization: `token ${getToken()}`
