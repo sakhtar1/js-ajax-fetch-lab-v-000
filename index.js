@@ -1,7 +1,4 @@
 
-const baseURL = 'https://api.github.com';
-const user = '<YOUR_USERNAME>';
-
 function getToken() {
   //change to your token to run in browser, but set
   //back to '' before committing so all tests pass
@@ -9,7 +6,11 @@ function getToken() {
 }
 
 function forkRepo() {
+
+  const giturl = 'https://api.github.com';
   const repo = 'learn-co-curriculum/js-ajax-fetch-lab';
+  const url = `${giturl}/repos/${repo}/forks`;
+  
 
   fetch(`https://api.github.com/learn-co-curriculum/js-ajax-fetch-lab/forks`,{
     method: 'POST',
