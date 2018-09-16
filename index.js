@@ -49,7 +49,7 @@ function createIssue() {
 
 function getIssues() {
 
-  const url = `https://api.github.com/repos/learn-co-curriculum/js-ajax-fetch-lab/issues`;
+  const url = `https://api.github.com/learn-co-curriculum/js-ajax-fetch-lab/issues`;
 
   fetch(url,
     {
