@@ -28,7 +28,7 @@ function showResults(json) {
 }
 
 function createIssue() {
-  
+
   const repo = 'learn-co-curriculum/js-ajax-fetch-lab';
   const url = `'https://api.github.com/repos/${repo}/issues`;
 
