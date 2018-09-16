@@ -48,10 +48,10 @@ function createIssue() {
 }
 
 function getIssues() {
-  const repo = '';
+
   const url = `https://api.github.com/repos/learn-co-curriculum/js-ajax-fetch-lab/issues`;
 
-  fetch('url',
+  fetch(url,
     {
       headers: {
         Authorization: `token ${getToken()}`
